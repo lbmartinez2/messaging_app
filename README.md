@@ -1,0 +1,1 @@
+npm install react-router-dom react-icons react-toastify reactjs-popup react-select use-debounce

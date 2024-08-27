@@ -1,0 +1,153 @@
+.filler-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 6rem;
+  
+  }
+  
+  .welcome-heading {
+    background-image:linear-gradient(83.84deg, #011638 -6.87%, #0496FF 26.54%, #ECA400 58.58%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    padding: 1rem 0;
+    animation: rainbow-text-simple-animation 0.75s ease forwards;
+  }
+  
+  .welcome-heading:hover {
+    animation: rainbow-text-simple-animation-rev 0.5s ease forwards;
+  }
+  
+  
+  
+  .welcome-title {
+    font-weight: 600;
+    padding: 0.5rem 0;
+  }
+  
+  .welcome-subtitle {
+    font-size: 2rem;
+  }
+  
+  .subphotos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+  
+  .image {
+    border-radius: 1rem;
+    box-shadow: 1rem 0.5rem 2rem #4e4e4e96;
+  }
+  
+  .image:hover{
+    transform: scale(104%);
+    transition: 0.2s ease-in-out;
+    opacity: 0.8;
+  }
+  
+  .img1 {
+    width: 100%;
+  }
+  
+  .img2, .img3 {
+    width: 50%;
+    margin: 0 0.25rem;
+  }
+  
+  .add-members-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 30rem;
+    /* border: 1px solid #7C809B; */
+    background-color: hsla(0, 0%, 100%, 0.6);
+    border-radius: 1rem;
+    gap: 0.5rem;
+    box-shadow: 0.2rem 0.5rem 1rem #01163884;
+  }
+  
+  .popup-overlay {
+    backdrop-filter: blur(0.25rem);
+    transition: 1s ease-in-out;
+  }
+  
+  #error-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .error-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 1rem 0.5rem;
+  }
+  
+  .error-text {
+    font-size: 1.5rem;
+  }
+  .error-subtext {
+    font-weight: 300;
+    padding: 0.5rem;
+  }
+  
+  a.home {
+    color:#011638;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .home:hover {
+    color:#ECA400;
+  }
+  
+  
+  
+  
+  
+  @keyframes rainbow-text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+  }
+  
+  @keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+  }
+  
+  .line {
+    background-color: #7c809b50;
+    border-radius: 1rem;
+    height: 2px;
+    margin-top: 1.5rem;
+    box-shadow: 0px 1px 5px #7c809baf;
+  }
+  

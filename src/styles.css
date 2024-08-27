@@ -1,0 +1,388 @@
+.message-container {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    flex-grow: 1;
+}
+
+.message-input-container {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.message-input {
+    width: 80%;
+    height: 3rem;
+    text-wrap: wrap;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #011638;
+    padding-left: 0.5rem;
+}
+
+.message-input:focus {
+    border-bottom: 2px solid #ECA400;
+}
+
+.message-btn {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-color: #011638;
+    color: #E8E9EB;
+    border-radius: 0 0.5rem 0.5rem 0;;
+}
+
+.message-btn:hover {
+    background-color: #ECA400;
+}
+
+.message-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    overflow-y: scroll;
+}
+
+.message-header-wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.5rem 1rem #E8E9EB;
+    text-align: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 12%;
+}
+
+.message-header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.add-members-btn {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    border-radius: 5rem 0 0 5rem;
+}
+
+.add-members-btn svg {
+    height: 30%;
+    width: 30%;
+}
+
+.add-members-btn:hover {
+    background-color: #011638;
+    color: #ECA400;
+    transition: 0.1s ease-in;
+}
+
+.receiver-msg, .sender-msg {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    line-height: 1.5rem;
+    transition: 0.3s ease-in;
+}
+
+.receiver-msg {
+    background-color: #6a706e62;
+    width: fit-content;
+    color: #011638;
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.sender-msg {
+    background-color:#0496FF;
+    align-self: flex-end;
+    width: fit-content;
+    color: #E8E9EB;
+    border-radius: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    margin-top: 0.25rem;
+    width: 100%;
+    gap: 0.25rem;
+}
+
+.user-list-item {
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #ECA400;
+    color: #011638;
+
+}
+
+.user-list-item:hover {
+    background-color: #011638;
+    color:  #E8E9EB
+}
+
+.user-list-container {
+    width: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 0rem;
+    overflow-x: hidden;
+}
+
+.create-channel-form {
+    padding: none;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    max-height: 20%;;
+}
+
+.channel-list-header, .user-list-header {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.message-header {
+    font-weight: 700;
+    font-size: 2rem;
+    color: #011638;
+    background-color: #ffffff;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.sender-uid {
+    align-self: flex-end;
+    width: fit-content;
+    color: #011638;
+}
+
+.receiver-uid {
+    width: fit-content;
+    color: #011638;
+}
+
+.receiver-uid, .sender-uid {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 1rem 0 0.25rem 0;
+}
+
+.sender-date {
+    align-self: flex-end;
+    width: fit-content;
+    color: #011638;
+}
+
+.receiver-date {
+    width: fit-content;
+    color: #011638;
+}
+
+.receiver-date, .sender-date {
+    font-size: 0.75rem;
+    margin: 0.25rem  0 0.25rem 0;
+}
+
+.message-bubble {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    padding: 0.5rem 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;;
+    width:80%;
+}
+
+.message-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 35%;
+    justify-content: center;
+    align-items: center;
+}
+
+.channel-name-input {
+    padding: 0.25rem 0.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    width: 70%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    width: 50%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color:#011638;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0.5rem 1rem 1rem #0116382f;
+}
+
+.login-header {
+    font-size: 3rem;
+    font-weight: 500;;
+}
+
+.login-subheader {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;;
+}
+
+
+.login-form label{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.login-form input{
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-bottom: 2px solid #011638;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.login-form input:focus {
+    border-bottom: 2px solid #ECA400;
+}
+
+.sign-up-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-wrapper .sign-up-link {
+    color: #011638;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+
+.sign-up-wrapper .sign-up-link:hover {
+    color: #ECA400;
+}
+
+
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    width: 50%;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color:#011638;
+    border-radius: 0.5rem;
+    text-align: left;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0.5rem 1rem 1rem #0116382f;
+}
+
+.sign-up-header {
+    font-size: 3rem;
+    font-weight: 500;;
+}
+
+.sign-up-subheader {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;;
+}
+
+
+.sign-up-form label{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.sign-up-form input{
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-bottom: 2px solid #011638;
+    border-radius: 0.25rem;
+    outline: none;
+}
+
+.sign-up-form input:focus {
+    border-bottom: 2px solid #ECA400;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-wrapper .login-link {
+    color: #011638;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+
+.login-wrapper .login-link:hover {
+    color: #ECA400;
+}
+
+
+
