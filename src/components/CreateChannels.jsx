@@ -1,23 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { BASE_URL, customStyles } from "../helpers/constants";
 import { getAuthHeaders } from "../helpers/functions";
 import AsyncSelect from "react-select/async";
-import { useState } from "react";
 import { getAllUsers } from "../App";
 
 function CreateChannels() {
-
   const headers = getAuthHeaders();
   const [selectedOption, setSelectedOption] = useState(null);
   const [userOptions, setUserOptions] = useState([]);
 
   const activeUser = JSON.parse(localStorage.getItem('activeUser'));
   const [members, setMembers] = useState([activeUser]);
+
   useEffect(() => {
     async function fetchUserOptions() {
       try {
         const response = await getAllUsers();
-        const options = await response.data.map((user) => ({
+        const options = response.data.map((user) => ({
           value: user.id,
           label: user.uid,
         }));
@@ -35,47 +34,41 @@ function CreateChannels() {
     }
   }, [selectedOption]);
 
-
   async function handleCreateChannel(e) {
     e.preventDefault();
     const channel_data = new FormData(e.target);
-    const members = await selectedOption.map(option => option.value)
+    const members = selectedOption.map(option => option.value);
 
     try {
-      const data = await fetch(`${BASE_URL}/channels`, {
+      const response = await fetch(`${BASE_URL}/channels`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           ...headers,
         },
         body: JSON.stringify({
-          "name": channel_data.get("channelName"),
-          "user_ids": [ ...members, activeUser]
+          name: channel_data.get("channelName"),
+          user_ids: [...members, activeUser],
         }),
       });
-      const response = await data.json();
-      console.log(response);
+      const data = await response.json();
+      console.log(data);
     } catch (err) {
       console.error(err);
     }
-
-    console.log("name: ", channel_data.get("channelName"));
-    console.log("userIDs: ",[ ...members, activeUser]);
 
     e.target.reset();
   }
 
   return (
-    <>
-     
-      <form className="create-channel-form" onSubmit={handleCreateChannel}>
-        <input
-          type="text"
-          className="channel-name-input"
-          name="channelName"
-          placeholder="Name the channel"
-        />
-         <AsyncSelect
+    <form className="create-channel-form" onSubmit={handleCreateChannel}>
+      <input
+        type="text"
+        className="channel-name-input"
+        name="channelName"
+        placeholder="Name the channel"
+      />
+      <AsyncSelect
         placeholder="Search Users"
         defaultOptions
         cacheOptions
@@ -92,11 +85,10 @@ function CreateChannels() {
         styles={customStyles}
         isMulti
       />
-        <button type="submit" className="channel-create-btn btn">
-          Create Channel
-        </button>
-      </form>
-    </>
+      <button type="submit" className="channel-create-btn btn">
+        Create Channel
+      </button>
+    </form>
   );
 }
 

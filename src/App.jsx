@@ -54,7 +54,7 @@ function App() {
         <div className="side-nav-container">
           <div className="side-nav-1">
             <div className="icons">
-              <Link to="/">
+              <Link to="/app">
                 <div className="logo">
                   <span>MT</span>
                 </div>
